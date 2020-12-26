@@ -19,7 +19,7 @@ const Decrypter = () => {
     return () => clearInterval(action);
   }, []);
 
-  return (<h1>{result}</h1>);
+  return (<h1 style={{fontSize: '60px', color: '#FF5A5F'}}>{result}</h1>);
 };
 
 export default Decrypter;

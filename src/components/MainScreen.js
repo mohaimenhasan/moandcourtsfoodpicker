@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Decrypter from "./Decrypter";
 import TextTypical from "./Typical";
 import {CarouselVal} from './Giphy';
+import ShowAllCuisine from "./ShowAllCuisine";
 
 const useStyles = makeStyles((theme) => ({
     button: {
@@ -62,9 +63,9 @@ class MainScreen extends Component{
             return(
                 <div className="card">
                     <h1 class="welcome">
-                        Mohaimen and Courtney
+                        Mohaimen's Food Picker
                     </h1>
-                    {CarouselVal("I love you", 1)}
+                    {CarouselVal("Picky", 1)}
                     <TextTypical/>
                     <Button variant="outlined" size="large" color="primary" className={classes.button} onClick={this.changeToFood}>
                         <b> Help me Pick Food </b>
@@ -79,11 +80,9 @@ class MainScreen extends Component{
             return(
                 <div className="card">
                     <Decrypter/>
+                    <ShowAllCuisine/>
                     <Button variant="outlined" size="large" color="primary" className={classes.button} onClick={this.changeToMain}>
                         <b> Go Back to Main </b>
-                    </Button>
-                    <Button variant="outlined" size="large" color="secondary" className={classes.button} onClick={this.changeToGIF}>
-                        <b> Feeling pretty GIPHY </b>
                     </Button>
                 </div>
             )
