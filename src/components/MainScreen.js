@@ -3,7 +3,8 @@ import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import Decrypter from "./Decrypter";
 import TextTypical from "./Typical";
-import {CarouselVal} from './Giphy';
+import Typical from 'react-typical';
+import {CarouselVal, TrendingGIFS} from './Giphy';
 import ShowAllCuisine from "./ShowAllCuisine";
 
 const useStyles = makeStyles((theme) => ({
@@ -88,9 +89,26 @@ class MainScreen extends Component{
             )
         }
         else if (this.state.gif){
+            let vals = ["Small Puppies", "Small Kittens", "Cute Ducklings", "Bachelorette", "I love you", "Cute Puppies", "Cute Kittens"];
             return(
                 <div className="card">
-
+                    <br/>
+                    <div class="title">
+                        <Typical
+                            steps={
+                                [
+                                    'Time to Pick your GIFs', 2000,
+                                    '', 2000
+                                ]}
+                            loop={Infinity}
+                            wrapper="p"
+                        />
+                    </div>
+                    {CarouselVal(vals[Math.floor(Math.random() * vals.length)], 3, 200)}
+                    <br/>
+                    {TrendingGIFS(3, 300)}
+                    <br/>
+                    {CarouselVal(vals[Math.floor(Math.random() * vals.length)], 3, 200)}
                 </div>
             )
         }

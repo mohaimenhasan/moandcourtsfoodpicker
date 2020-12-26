@@ -9,4 +9,9 @@ function CarouselVal(val, limitVal, gifHeightVal=300) {
     return <Carousel fetchGifs={fetchGifs} gifHeight={gifHeightVal} gutter={20} />;
 }
 
-export {CarouselVal};
+function TrendingGIFS(limitVal, gifHeightVal=300){
+  const fetchGifs = () => giphyFetch.trending({ limit: limitVal })
+  return <Carousel fetchGifs={fetchGifs} gifHeight={gifHeightVal} gutter={20}  />
+}
+
+export {CarouselVal, TrendingGIFS};
