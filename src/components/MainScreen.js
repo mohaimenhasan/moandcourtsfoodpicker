@@ -63,9 +63,9 @@ class MainScreen extends Component{
             return(
                 <div className="card">
                     <h1 class="welcome">
-                        Mohaimen's Food Picker
+                        Mohaimen and Courtney
                     </h1>
-                    {CarouselVal("Picky", 1)}
+                    {CarouselVal("I love you", 1)}
                     <TextTypical/>
                     <Button variant="outlined" size="large" color="primary" className={classes.button} onClick={this.changeToFood}>
                         <b> Help me Pick Food </b>
