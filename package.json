@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "http://mohaimenhasan.github.io/moandcourtsfoodpicker",
-
   "dependencies": {
     "-": "0.0.1",
     "@giphy/react-components": "^2.0.1",
